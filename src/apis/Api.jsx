@@ -1,1 +1,1 @@
-export const preEndpoint = "https://rm-backend-reop.onrender.com";
+export default preEndpoint = "https://rm-backend-reop.onrender.com";
