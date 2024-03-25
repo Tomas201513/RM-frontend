@@ -1,10 +1,9 @@
 import axios from "axios";
 import { TokenJson } from "./token/AuthToken";
 import axiosInstance from "src/utils/useAxiosInterceptors";
-import preEndpoint from "./Api";
 
-const api = `${preEndpoint}/api/budgets/`;
-const api2 = `${preEndpoint}/api/projects/`;
+const api = `https://rm-backend-reop.onrender.com/api/budgets/`;
+const api2 = `https://rm-backend-reop.onrender.com/api/projects/`;
 
 export const GetBudget = async () => {
     if (localStorage.getItem("accessToken")) {

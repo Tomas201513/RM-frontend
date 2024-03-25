@@ -3,7 +3,7 @@ import { TokenJson } from "./token/AuthToken";
 import axiosInstance from "src/utils/useAxiosInterceptors";
 import preEndpoint from "./Api";
 
-const api = `${preEndpoint}/api/departments/`;
+const api = `https://rm-backend-reop.onrender.com/api/departments/`;
 
 export const GetDepartment = async () => {
     if (localStorage.getItem("accessToken")) {

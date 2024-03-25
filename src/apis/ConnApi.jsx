@@ -1,9 +1,8 @@
 import axios from "axios";
 import { TokenJson } from "./token/AuthToken";
 import axiosInstance from "src/utils/useAxiosInterceptors";
-import preEndpoint from "./Api";
 
-const api = `${preEndpoint}/api/conn/`;
+const api = `https://rm-backend-reop.onrender.com/api/conn/`;
 
 export const GetConn = async () => {
     if (localStorage.getItem("accessToken")) {

@@ -5,7 +5,6 @@ import jwt_decode from "jwt-decode";
 import axios from "axios";
 import PropTypes from 'prop-types';
 import ToastContext from "src/context/hot-toast-context/HotToastContext";
-import preEndpoint from "../apis/Api";
 
 const AuthContext = createContext({});
 
@@ -24,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   async function loginUser(values) {
     // console.log("context" + JSON.stringify(values));
     try {
-      const res = await axios.post(`${preEndpoint}/api/auth/logIn`, {
+      const res = await axios.post(`https://rm-backend-reop.onrender.com/api/auth/logIn`, {
         email: values.email,
         password: values.password
       });
@@ -49,7 +48,7 @@ export const AuthProvider = ({ children }) => {
   async function registerUser(values) {
     // console.log("context" + JSON.stringify(values));
     try {
-      const res = await axios.post(`${preEndpoint}/api/auth/register`, {
+      const res = await axios.post(`https://rm-backend-reop.onrender.com/api/auth/register`, {
         userName: values.name,
         email: values.email,
         password: values.password,
@@ -69,7 +68,7 @@ export const AuthProvider = ({ children }) => {
 
   async function logoutUser() {
     try {
-      const res = await axios.delete(`${preEndpoint}/api/auth/logOut`, {
+      const res = await axios.delete(`https://rm-backend-reop.onrender.com/api/auth/logOut`, {
         data: {
           refreshToken: localStorage.getItem("refreshToken"),
         },

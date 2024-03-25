@@ -1,8 +1,7 @@
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-import preEndpoint from "../apis/Api";
 
-const baseURL = `${preEndpoint}`;
+const baseURL = `https://rm-backend-reop.onrender.com`;
 
 let access = localStorage.getItem("accessToken")
     ? localStorage.getItem("accessToken")
