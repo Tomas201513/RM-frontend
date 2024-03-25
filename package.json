@@ -21,6 +21,8 @@
     "@mui/x-data-grid": "^6.3.0",
     "apexcharts": "^3.40.0",
     "axios": "^1.4.0",
+    "recharts": "^2.0.10",
+    "react-minimal-pie-chart": "^10.0.0",
     "file-saver": "^2.0.5",
     "formik": "^2.2.9",
     "framer-motion": "^11.0.14",
