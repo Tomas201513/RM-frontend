@@ -17,6 +17,8 @@ import {
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import useResponsive from 'src/hooks/useResponsive';
 import { Logo } from 'src/components/logo';
+import Pic from 'src/assets/acted2.png'
+
 // import { Scrollbar } from 'src/components/scrollbar';
 // import { Scrollbar } from '../../components/scrollbar';
 import { adminItems, attendantItems } from './config';
@@ -90,7 +92,7 @@ export const SideNav = ({ open, onClose, setOpenNav, openNav }) => {
           }}
           onClick={() => setOpenNav(!openNav)}
         >
-          <img src="/src/assets/acted2.png" alt="logo" width="50"/>
+          <img src={Pic}  alt="logo" width="50"/>
             <Typography
               variant="h7"
               sx={{
