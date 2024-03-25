@@ -45,7 +45,7 @@ function CreateUpdateCatagory({  selectedData, editable, setEditable, name  }) {
     const handleSubmit = async (values) => {
         try {
             if (selectedData) {
-              await updateSenario( {selectedData: selectedData._id, values});
+              await updateSenario( {selectedData: selectedData?._id, values});
     
             }
             else {
@@ -108,9 +108,9 @@ function CreateUpdateCatagory({  selectedData, editable, setEditable, name  }) {
                           >
                             <Formik
                               initialValues={{
-                                SenarioCode: selectedData ? selectedData.SenarioCode : "",
-                                SenarioPrice: selectedData ? selectedData.SenarioPrice : "",
-                                SenarioProcedure: selectedData ? selectedData.SenarioProcedure : "",
+                                SenarioCode: selectedData ? selectedData?.SenarioCode : "",
+                                SenarioPrice: selectedData ? selectedData?.SenarioPrice : "",
+                                SenarioProcedure: selectedData ? selectedData?.SenarioProcedure : "",
                                 comment: selectedData ? selectedData.comment : "",
                         
                               }}

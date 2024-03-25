@@ -16,7 +16,13 @@ import {
 } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import useResponsive from 'src/hooks/useResponsive';
+<<<<<<< HEAD
 import Pic from 'src/assets/acted2.png'
+=======
+import { Logo } from 'src/components/logo';
+import Pic from 'src/assets/acted2.png'
+
+>>>>>>> 1c1840d1889a11503476fb8a53d649f5747e8046
 // import { Scrollbar } from 'src/components/scrollbar';
 // import { Scrollbar } from '../../components/scrollbar';
 import { adminItems, attendantItems } from './config';
