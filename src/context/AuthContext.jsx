@@ -5,6 +5,7 @@ import jwt_decode from "jwt-decode";
 import axios from "axios";
 import PropTypes from 'prop-types';
 import ToastContext from "src/context/hot-toast-context/HotToastContext";
+import preEndpoint from "../apis/Api";
 
 const AuthContext = createContext({});
 
@@ -21,19 +22,19 @@ export const AuthProvider = ({ children }) => {
       : null
   );
   async function loginUser(values) {
-    console.log("context" + JSON.stringify(values));
+    // console.log("context" + JSON.stringify(values));
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/auth/logIn", {
+      const res = await axios.post(`${preEndpoint}/api/auth/logIn`, {
         email: values.email,
         password: values.password
       });
-      console.log("contextxxxxxxxxxxxxxx");
+      // console.log("contextxxxxxxxxxxxxxx");
 
       localStorage.setItem("accessToken", res.data.accessToken);
       localStorage.setItem("refreshToken", res.data.refreshToken);
       setAccessTokens(res.data.accessToken);
       const decoded = jwt_decode(res.data.accessToken);
-      console.log('decoded',decoded);
+      // console.log('decoded',decoded);
       setUserDetail(decoded);
       // localStorage.setItem("hasLoggedIn", true);
       navigate("/app", { replace: true });
@@ -48,7 +49,7 @@ export const AuthProvider = ({ children }) => {
   async function registerUser(values) {
     // console.log("context" + JSON.stringify(values));
     try {
-      const res = await axios.post("http://localhost:8000/api/auth/register", {
+      const res = await axios.post(`${preEndpoint}/api/auth/register`, {
         userName: values.name,
         email: values.email,
         password: values.password,
@@ -68,7 +69,7 @@ export const AuthProvider = ({ children }) => {
 
   async function logoutUser() {
     try {
-      const res = await axios.delete("http://127.0.0.1:8000/api/auth/logOut", {
+      const res = await axios.delete(`${preEndpoint}/api/auth/logOut`, {
         data: {
           refreshToken: localStorage.getItem("refreshToken"),
         },

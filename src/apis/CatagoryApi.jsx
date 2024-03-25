@@ -1,8 +1,9 @@
 import axios from "axios";
 import { TokenJson } from "./token/AuthToken";
 import axiosInstance from "src/utils/useAxiosInterceptors";
+import preEndpoint from "./Api";
 
-const api = "http://127.0.0.1:8000/api/catagories/";
+const api = `${preEndpoint}/api/catagories/`;
 
 
 export const GetCatagory = async () => {

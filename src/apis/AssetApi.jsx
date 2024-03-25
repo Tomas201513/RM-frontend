@@ -1,8 +1,8 @@
 import axios from "axios";
 import { TokenJson } from "./token/AuthToken";
 import axiosInstance from "src/utils/useAxiosInterceptors";
-
-const api = "http://127.0.0.1:8000/api/assets/";
+import preEndpoint from "./Api";
+const api = `${preEndpoint}/api/assets/`;
 
 export const GetAsset = async () => {
     if (localStorage.getItem("accessToken")) {

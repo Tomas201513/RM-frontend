@@ -1,7 +1,8 @@
 import axios from "axios";
 import jwt_decode from "jwt-decode";
+import preEndpoint from "../apis/Api";
 
-const baseURL = "http://127.0.0.1:8000";
+const baseURL = `${preEndpoint}`;
 
 let access = localStorage.getItem("accessToken")
     ? localStorage.getItem("accessToken")

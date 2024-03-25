@@ -39,8 +39,8 @@ TimeAgo.addLocale(ru)
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
           <ErrorBoundary>
-            <AuthProvider>
-              <CountryProvider>
+          <AuthProvider>
+          <CountryProvider>
             <CatagoryProvider>
             <SubCatagoryProvider>
               <PositionProvider>
