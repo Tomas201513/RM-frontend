@@ -1,1 +1,0 @@
-export default preEndpoint = "https://rm-backend-reop.onrender.com";
